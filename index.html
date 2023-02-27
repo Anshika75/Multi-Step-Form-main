@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Multi Step Form</title>
+</head>
+<body>
+    <div class="icon" onclick="themechange()">
+        <i id="icon" class="fas fa-sun"></i>
+    </div>
+    <main>
+        <div class="card">
+            <div class="left">
+                <div class="head">SignUp Form</div>
+                <div class="progress">
+                    <div class="step">
+                        <p>General</p>
+                        <div class="dot">
+                          <span>1</span>
+                        </div>
+                        <div class="check fas fa-check"></div>
+                      </div>
+                      <div class="step">
+                        <p>Connect</p>
+                        <div class="dot">
+                          <span>2</span>
+                        </div>
+                        <div class="check fas fa-check"></div>
+                      </div>
+                      <div class="step">
+                        <p>Login</p>
+                        <div class="dot">
+                          <span>3</span>
+                        </div>
+                        <div class="check fas fa-check"></div>
+                      </div>
+                      <div class="step">
+                        <p>Payment</p>
+                        <div class="dot">
+                          <span>4</span>
+                        </div>
+                        <div class="check fas fa-check"></div>
+                      </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="formbox">
+                    <form action="#">
+                      <div class="page slider">
+                        <div class="title">Basic Info:</div>
+                        <div class="field first">
+                          <div class="label">First Name</div>
+                          <input type="text">
+                        </div>
+                        <div class="field">
+                          <div class="label">Last Name</div>
+                          <input type="text">
+                        </div>
+                        <div class="field">
+                          <button class="nxt1 next">Next</button>
+                        </div>
+                      </div>
+            
+                      <div class="page">
+                        <div class="title">Contact Info:</div>
+                        <div class="field first">
+                          <div class="label">Email</div>
+                          <input type="text">
+                        </div>
+                        <div class="field">
+                          <div class="label">Contact Number</div>
+                          <input type="Number">
+                        </div>
+                        <div class="field btns">
+                          <button class="prev2 prev">Previous</button>
+                          <button class="nxt2 next">Next</button>
+                        </div>
+                      </div>
+            
+                      <div class="page">
+                        <div class="title">Login Details:</div>
+                        <div class="field first">
+                          <div class="label">Username</div>
+                          <input type="text">
+                        </div>
+                        <div class="field">
+                          <div class="label">Password</div>
+                          <input type="text">
+                        </div>
+                        <div class="field btns">
+                          <button class="prev3 prev">Previous</button>
+                          <button class="nxt3 next">Next</button>
+                        </div>
+                      </div>
+            
+                      <div class="page">
+                        <div class="title">Payment:</div>
+                        <div class="field first">
+                          <div class="label">Credit Card No.</div>
+                          <input type="text">
+                        </div>
+                        <div class="field">
+                          <div class="label">CVV</div>
+                          <input type="password">
+                        </div>
+                        <div class="field btns">
+                          <button class="prev4 prev">Previous</button>
+                          <button class="submit">Submit</button>
+                        </div>
+                      </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>

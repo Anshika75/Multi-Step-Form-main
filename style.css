@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+:root{
+    --primary: #6200ee;
+    --primaryvariant:#3700b3;
+    --surface:#ffffff;
+    --error:#b00020;
+    --secondary: #000000;
+    --form:#f1eeee;
+    --margin:30px; /*20px*/
+}
+.icon{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background-color: var(--surface);
+    color: var(--secondary);
+    opacity: 0.8;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+    z-index: 20;
+}
+.icon:hover{
+    opacity: 1;
+}
+.icon i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+main{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(142, 45, 226,0.9), rgba(74, 0, 224,0.9)), url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29udGFjdCUyMHVzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600');
+    background-size: cover;
+    display: grid;
+    place-items: center;
+}
+.card{
+    /* width: 300px; */
+    max-width: 620px;
+    background: var(--surface);
+    text-align: center;
+    border-radius: 7px;
+    padding: 50px 15px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow:20px 20px 50px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease-in-out;
+}
+.card .left{
+    width: 300px;
+    /* height: 300px; */
+    /* background-color: #b000203b; */
+    margin-right: 15px;
+}
+.card .left .head{
+    font-size: calc(20px + 1vw);
+    font-weight: 700;
+    /* margin: 15px; */
+    color: var(--primary);
+}
+.card .progress{
+    display: flex;
+    margin: 40px 0;
+    user-select: none;
+}
+.card .progress .step{
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+.card .progress .step p{
+    font-weight: 500;
+    font-size: 12px;
+    color:var(--secondary);
+    margin-bottom: 8px;
+}
+.progress .step .dot{
+    position: relative;
+    height: 20px;
+    width: 20px;
+    border: 1.5px solid var(--secondary);
+    display: inline-block;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+  }
+.progress .step .dot.active{
+    border-color: var(--primaryvariant);
+    background: var(--primaryvariant);
+  }
+.progress .step .dot span{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--secondary);
+  }
+.progress .step .dot.active span{
+    display: none;
+}
+.progress .step .dot:before, .progress .step .dot:after{
+    position: absolute;
+    content: '';
+    top: 50%;
+    transform: translateY(-50%) translateX(50%);
+    left: -2.5px;
+    height: 3px;
+    width: 50px;
+    border-radius: 20px;
+    background: var(--secondary);
+    opacity: 0.3;
+}
+.progress .step .dot.active:after{
+    background: var(--primaryvariant);
+    transform: scaleX(0) translateY(-50%) translateX(50%);
+    transform-origin: left;
+    opacity: 1;
+    animation: fade 0.3s linear forwards;
+}
+@keyframes fade {
+    100%{
+      transform: scaleX(1) translateY(-50%) translateX(50%);
+    }
+}
+.progress .step:last-child .dot:before, .progress .step:last-child .dot:after{
+    display: none;
+}
+.progress .step p.active{
+    color: var(--primaryvariant);
+    transition: 0.5s ease-in-out;
+}
+.progress .step .check{
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    font-size: 12px;
+    line-height: 22px;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.progress .step .check.active{
+    display: block;
+    color: #fff;
+} 
+.card .right{
+    width: 300px;
+    height: 300px;
+    /* background-color: rgba(0, 255, 255, 0.151); */
+}
+.card .formbox{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* background-color: #d33f8e21; */
+}
+.card .formbox form{
+    display: flex;
+    width: 400%;
+}
+.formbox form .page{
+    width: 25%;
+    transition: margin-left 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.formbox form .page .title{
+    text-align: center;
+    font-size: calc(18px + 1vw);
+    font-weight: 600;
+    color: var(--primary);
+}
+.formbox form .page .field{
+    width: 100%;
+    margin: 10px 0 0 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /* position: relative; */
+}
+.formbox form .page .field:last-child{
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    margin-top: var(--margin);
+}
+.formbox form .page .field.first{
+    margin-top: 20px;
+}
+form .page .field .label{
+    font-weight: 500;
+    font-size: calc(12px + .5vw);
+    color: var(--secondary);
+    margin-bottom: 5px;
+    text-align: left;
+}
+form .page .field input{
+    height: 30px;
+    width: 95%;
+    border: 1px solid var(--form);
+    border-radius: 5px;
+    font-size: calc(12px + .5vw);
+    padding: 2.5px 0;
+    padding-left: 5px;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--form);
+    color: var(--secondary);
+}
+form .page .field input:hover{
+    border: 1px solid var(--primaryvariant);
+}
+form .page .field input:focus{
+    border: 1px solid var(--primaryvariant);
+}
+form .page .field .req{
+    font-size: calc(10px + .5vw);
+    display: none;
+    color:var(--error);
+}
+form .page .field button{
+    width: 100%;
+    height: calc(100% + 5px);
+    border: none;
+    background: var(--primaryvariant);
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: calc(12px + .5vw);
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+}
+form .page .field button:hover{
+    background: var(--secondary);
+    color: var(--surface);
+}
+form .page .btns button.prev{
+    margin-right: 7px;
+    font-size: calc(12px + .5vw);
+} 
+@media screen and (max-width: 600px){
+    .card{
+        max-width: 300px;
+        padding: 20px 15px;
+    }
+    .card .progress{
+        margin: 20px 0;
+    }
+}
