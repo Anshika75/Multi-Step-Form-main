@@ -44,6 +44,7 @@ main{
     background-size: cover;
     display: grid;
     place-items: center;
+    position: relative;
 }
 .card{
     /* width: 300px; */
@@ -256,6 +257,47 @@ form .page .btns button.prev{
     margin-right: 7px;
     font-size: calc(12px + .5vw);
 } 
+.container{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.container a{
+    text-decoration: none;
+    font-size: calc(12px + .5vw);
+    background-color: var(--surface);
+    color: var(--secondary);
+    opacity: 0.8;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+    z-index: 20;
+    display: grid;
+    place-items: center;
+    margin: 12px;
+}
+.container a:hover{
+    opacity: 1;
+}
+.copy{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px; 
+    color: var(--surface);
+    opacity: 0.8;
+}
+
 @media screen and (max-width: 600px){
     .card{
         max-width: 300px;
