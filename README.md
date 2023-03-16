@@ -1,4 +1,4 @@
-# Multi-Step-Payment-Form
+# Multi-Step-Form
 
 # View
 
